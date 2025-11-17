@@ -1,13 +1,15 @@
 /* Reset dasar */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     transition: 300ms;
 }
 
+
 /* Buat body menutupi seluruh tinggi layar */
+
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
@@ -16,27 +18,31 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-image: url(bg.jpg);
-    background-size: cover;
+    background-image: url("bg.jpg");
 }
 
 body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* ubah angka terakhir untuk lebih gelap/terang */
+    background: rgba(0, 0, 0, 0.5);
+    /* ubah angka terakhir untuk lebih gelap/terang */
     z-index: -1;
     height: 100%;
     width: auto;
 }
 
+
 /* Heading */
+
 h2 {
     margin-bottom: 20px;
     color: #fafafa;
 }
 
+
 /* Tabel */
+
 table {
     margin-top: 20px;
     width: 100%;
@@ -45,10 +51,11 @@ table {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: left;
@@ -63,7 +70,9 @@ tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+
 /* Link */
+
 a {
     text-decoration: none;
     color: #007BFF;
@@ -78,7 +87,6 @@ a {
 #tambahdata:hover {
     padding: 10px;
     border-radius: 5px;
-
     background-color: #cdcdcd;
 }
 
@@ -86,12 +94,14 @@ a:hover {
     text-decoration: underline;
 }
 
+
 /* Form */
+
 form {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
