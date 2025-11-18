@@ -8,28 +8,36 @@
 }
 
 
-/* Buat body menutupi seluruh tinggi layar */
+/* Buat body menutupi seluruh tinggi layar dan atur background */
 
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    background-color: #00113dcd;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-image: url("bg.jpg");
+    /* PROPERTI GAMBAR DI SINI */
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+
+/* Overlay semi-transparan untuk memudahkan pembacaan teks */
 
 body::before {
     content: "";
     position: absolute;
     inset: 0;
+    /* Lapisan gelap 50% */
     background: rgba(0, 0, 0, 0.5);
-    /* ubah angka terakhir untuk lebih gelap/terang */
     z-index: -1;
-    height: 100%;
-    width: auto;
+    /* Koreksi: Pastikan overlay menutupi seluruh viewport */
+    min-height: 100vh;
+    width: 100%;
 }
 
 
@@ -62,7 +70,7 @@ td {
 }
 
 th {
-    background-color: #007BFF;
+    background-color: #8c0101;
     color: white;
 }
 
@@ -78,15 +86,21 @@ a {
     color: #007BFF;
 }
 
+
+/* Link Tambah Data (jika menggunakan ID 'tambahdata') */
+
 #tambahdata {
     padding: 10px;
     border-radius: 5px;
     background-color: #f9f9f9;
+    color: #7c0909;
+    /* Pastikan teks link tetap terlihat */
+    display: inline-block;
+    /* Agar padding berfungsi */
+    margin-bottom: 10px;
 }
 
 #tambahdata:hover {
-    padding: 10px;
-    border-radius: 5px;
     background-color: #cdcdcd;
 }
 
@@ -95,7 +109,7 @@ a:hover {
 }
 
 
-/* Form */
+/* Form (tambah.php, edit.php, search form) */
 
 form {
     background-color: #fff;
@@ -105,6 +119,20 @@ form {
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
+}
+
+
+/* Tambahan untuk form pencarian agar bisa sejajar (jika menggunakan class .search-form di index.php) */
+
+.search-form {
+    max-width: 1100px;
+    /* Lebar sesuai tabel */
+    display: flex;
+    gap: 10px;
+    background: none;
+    /* Hilangkan background putih jika sudah ada form input di index.php */
+    box-shadow: none;
+    margin-bottom: 15px;
 }
 
 form input,
@@ -121,7 +149,7 @@ select {
 }
 
 form button {
-    background-color: #007BFF;
+    background-color: #cd0303;
     color: white;
     border: none;
     cursor: pointer;
